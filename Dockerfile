@@ -10,12 +10,12 @@ RUN echo "server {  \
                       proxy_set_header        X-Real-IP \$remote_addr; \
                       proxy_set_header        X-Forwarded-For \$proxy_add_x_forwarded_for; \
                   } \
-                  location /jeecg-boot/websocket {                                                    \
-                          proxy_pass http://jeecg-boot-system:8080/jeecg-boot/websocket/;                                           \
-                          proxy_http_version 1.1;                                           \
-                          proxy_set_header Upgrade $http_upgrade;                           \
-                          proxy_set_header Connection \"Upgrade\";                          \
-                      }                                                                     \
+                  location /jeecg-boot/websocket { \
+                          proxy_pass http://jeecg-boot-system:8080/jeecg-boot/websocket/; \
+                          proxy_http_version 1.1; \
+                          proxy_set_header Upgrade \$http_upgrade; \
+                          proxy_set_header Connection \"Upgrade\"; \
+                      } \
                   #解决Router(mode: 'history')模式下，刷新路由地址不能找到页面的问题 \
                   location / { \
                      root   /var/www/html/; \
