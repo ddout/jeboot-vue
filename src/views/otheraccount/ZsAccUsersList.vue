@@ -75,9 +75,9 @@
     <div class="table-operator">
       <a-button @click="handleAdd" type="primary" icon="plus">新增</a-button>
       <a-button type="primary" icon="download" @click="handleExportXls('研发资源账号')">导出</a-button>
-      <a-upload name="file" :showUploadList="false" :multiple="false" :headers="tokenHeader" :action="importExcelUrl" @change="handleImportExcel">
-        <a-button type="primary" icon="import">导入</a-button>
-      </a-upload>
+      <!--<a-upload name="file" :showUploadList="false" :multiple="false" :headers="tokenHeader" :action="importExcelUrl" @change="handleImportExcel">-->
+        <!--<a-button type="primary" icon="import">导入</a-button>-->
+      <!--</a-upload>-->
       <!-- 高级查询区域 -->
       <j-super-query :fieldList="superFieldList" ref="superQueryModal" @handleSuperQuery="handleSuperQuery"></j-super-query>
       <a-dropdown v-if="selectedRowKeys.length > 0">
@@ -255,7 +255,7 @@
           deleteBatch: "/otheraccount/zsAccUsers/deleteBatch",
           exportXlsUrl: "/otheraccount/zsAccUsers/exportXls",
           importExcelUrl: "otheraccount/zsAccUsers/importExcel",
-          
+
         },
         dictOptions:{},
         superFieldList:[],
