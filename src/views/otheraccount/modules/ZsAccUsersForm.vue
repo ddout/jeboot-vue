@@ -35,17 +35,17 @@
           </a-col>
           <a-col :span="12">
             <a-form-model-item label="GIT账号" :labelCol="labelCol" :wrapperCol="wrapperCol" prop="uaccGit">
-              <a-input v-model="model.uaccGit" placeholder="请输入GIT账号"  ></a-input>
+              <a-input v-model="model.uaccGit" placeholder="请输入GIT账号" disabled ></a-input>
             </a-form-model-item>
           </a-col>
           <a-col :span="12">
             <a-form-model-item label="VPN账号" :labelCol="labelCol" :wrapperCol="wrapperCol" prop="uaccVpn">
-              <a-input v-model="model.uaccVpn" placeholder="请输入VPN账号"  ></a-input>
+              <a-input v-model="model.uaccVpn" placeholder="请输入VPN账号" disabled ></a-input>
             </a-form-model-item>
           </a-col>
           <a-col :span="12">
             <a-form-model-item label="禅道账号" :labelCol="labelCol" :wrapperCol="wrapperCol" prop="uaccZentao">
-              <a-input v-model="model.uaccZentao" placeholder="请输入禅道账号"  ></a-input>
+              <a-input v-model="model.uaccZentao" placeholder="请输入禅道账号" disabled ></a-input>
             </a-form-model-item>
           </a-col>
           <a-col :span="12">
@@ -171,7 +171,7 @@
               that.confirmLoading = false;
             })
           }
-         
+
         })
       },
     }
