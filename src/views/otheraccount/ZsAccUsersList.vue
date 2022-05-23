@@ -80,6 +80,7 @@
       <!--</a-upload>-->
       <!-- 高级查询区域 -->
       <j-super-query :fieldList="superFieldList" ref="superQueryModal" @handleSuperQuery="handleSuperQuery"></j-super-query>
+      <span>勾选后可重置密码，重置后：Abc@123456</span>
       <a-dropdown v-if="selectedRowKeys.length > 0">
         <a-menu slot="overlay">
           <a-menu-item key="1" @click="batchDel"><a-icon type="delete"/>密码重置</a-menu-item>
